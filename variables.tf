@@ -1,73 +1,85 @@
 variable "token" {}
 variable "username" {
-    default = "root"
+  default = "root"
 }
 variable "username_id" {}
 variable "debug_set" {
-    default = "true"
+  default = "true"
 }
 variable "description" {
-   default = "Terraform Demo"  
+  default = "Terraform Demo"
 }
 variable "startup" {
-    default = "1"
+  default = "1"
 }
 variable "mem" {
-    default = "8196"
+  default = "8196"
 }
 variable "cores" {
-    default = "2"
+  default = "2"
 }
 variable "host_cpu" {
-    default = "host"
+  default = "host"
 }
 variable "numa" {
-  default =  "false"
+  default = "false"
 }
 variable "hotplug_options" {
   default = "network,disk,usb"
 }
 variable "tagging" {
-    default = "remo, demo"
+  default = "remo, demo"
 }
 variable "vmstate" {
-    default = "running"
+  default = "running"
 }
 variable "vmcount" {
-    default = "3"
+  default = "2"
 }
 variable "VM-name" {
   default = "VM-demo-tf"
 }
 variable "clone_from" {
-  default = "tf-temp-vm"
+  default = "terraform-template-cloud-init"
 }
 variable "full_clone_setting" {
-    default = "true"
+  default = "true"
 }
 variable "target_host" {
-    default = "pve1"  
+  default = "pve1"
 }
 variable "agent_enabled" {
-    default = "1"
+  default = "1"
 }
 
 # NETWORKING
 variable "network_bridge" {
-    default = "vmbr0"
+  default = "vmbr0"
 }
 variable "network_firewall" {
-    default = "true"
+  default = "true"
 }
 variable "network_link_down" {
-    default = "false"
+  default = "false"
 }
 variable "network_model" {
-    default = "virtio"
+  default = "virtio"
 }
 variable "network_mtu" {
-    default = "1500"
+  default = "1500"
 }
 variable "autoreboot" {
-    default = "true"
+  default = "true"
+}
+variable "onboot_setting" {
+  default = "true"
+}
+variable "sshuser" {
+  default = "root"
+}
+variable "ssh_public_key" {
+  default = "yoursshkeyhere"
+}
+variable "ostype" {
+  default = "cloud-init"
 }

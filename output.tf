@@ -1,5 +1,5 @@
 output "instance_ip_addr" {
-    value = proxmox_vm_qemu.resource-name[*].default_ipv4_address
+  value       = proxmox_vm_qemu.resource-name[*].default_ipv4_address
 }
 
 output "vm_id" {
