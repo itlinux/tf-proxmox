@@ -1,3 +1,37 @@
 = Setup
+Assuming you have a working installation and created a template in your proxmox then you can leverage this terraform code to create a new VMs.
 
-Documentation on steps are coming soon!
+== Updates
+The main.tf file does not really need to be changed as I have included all the required variables in the variables.tf file.
+
+== Usage
+Once you git clone this repo you can run the terraform init command to download the required modules.
+
+== Terraform.tfvars
+I have included a terraform.tfvars.example file which you can use as a template to create your own terraform.tfvars file. 
+
+== Creating the VM
+Once you have your terraform.tfvars file you can run the terraform apply command to create your VM.
+
+== Output
+
+.codeblock: terraform creating one vm. 
+----
+proxmox_vm_qemu.resource-name[0]: Creating...
+proxmox_vm_qemu.resource-name[0]: Still creating... [10s elapsed]
+proxmox_vm_qemu.resource-name[0]: Still creating... [20s elapsed]
+proxmox_vm_qemu.resource-name[0]: Still creating... [30s elapsed]
+proxmox_vm_qemu.resource-name[0]: Still creating... [40s elapsed]
+proxmox_vm_qemu.resource-name[0]: Creation complete after 46s [id=pve2/qemu/141]
+
+Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+instance_ip_addr = [
+  "192.168.1.180",
+]
+vm_id = [
+  "pve2/qemu/141",
+]
+----

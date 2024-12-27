@@ -34,19 +34,20 @@ variable "vmstate" {
   default = "running"
 }
 variable "vmcount" {
-  default = "2"
+  default = "1"
 }
 variable "VM-name" {
   default = "VM-demo-tf"
 }
 variable "clone_from" {
-  default = "terraform-template-cloud-init"
+  default = "tf-template-cloud-init-ubuntu"
+  #default = "terraform-template-cloud-init"
 }
 variable "full_clone_setting" {
   default = "true"
 }
 variable "target_host" {
-  default = "pve1"
+  default = "pve2"
 }
 variable "agent_enabled" {
   default = "1"
@@ -78,7 +79,7 @@ variable "sshuser" {
   default = "root"
 }
 variable "ssh_public_key" {
-  default = "yoursshkeyhere"
+  #default = "yoursshkeyhere"
 }
 variable "ostype" {
   default = "cloud-init"
